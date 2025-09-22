@@ -406,13 +406,14 @@ public class solitaireFinal {
 			b.init();
 			finale.setTimeLimit(2, TimeUnit.MINUTES);
 			boolean t = finale.play(b);
+			System.out.println("STARTING... THIS PROGRAM WILL TIME OUT IN 2 MINUTES");
 			if (finale.isTimedOut()) { 
 				System.out.println("TIMED OUT (took > 2 min)");
 			}
 			if (t) {
 				b.print();
-				System.out.println("THIS BOARD HAD " + finale.solutionsFound() + " SOLUTIONS AND CAN BE SOLVED IN " + finale.bestMoves() + " MOVES");
-			}
+				System.out.println(b.getSpare().toString() + "\n");
+				System.out.println("THIS PROGRAM FOUND " + finale.solutionsFound() + " SOLUTIONS AND CAN BE SOLVED IN A MINIMUM OF " + finale.bestMoves() + " MOVES");			}
 			else {
 				b.print();
 				System.out.println("THIS BOARD CANNOT BE SOLVED...");
@@ -420,3 +421,4 @@ public class solitaireFinal {
 			}
 		}
 }
+
