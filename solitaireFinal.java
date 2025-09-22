@@ -404,11 +404,11 @@ public class solitaireFinal {
 			solitaireFinal finale = new solitaireFinal();
 			Board b = new Board();
 			b.init();
-			finale.setTimeLimit(2, TimeUnit.MINUTES);
+			finale.setTimeLimit(1, TimeUnit.MINUTES);
 			boolean t = finale.play(b);
-			System.out.println("STARTING... THIS PROGRAM WILL TIME OUT IN 2 MINUTES");
+			System.out.println("STARTING... THIS PROGRAM WILL TIME OUT IN 1 MINUTE");
 			if (finale.isTimedOut()) { 
-				System.out.println("TIMED OUT (took > 2 min)");
+				System.out.println("TIMED OUT (took > 1 min)");
 			}
 			if (t) {
 				b.print();
@@ -421,4 +421,5 @@ public class solitaireFinal {
 			}
 		}
 }
+
 
